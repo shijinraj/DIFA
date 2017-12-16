@@ -1,68 +1,33 @@
-[KYC (Know Your Customer)](https://guide.blockchain.z.com/docs/oss/kyc/) - GMO Blockchain Open Source
-==================================================
+Digital Id Verified Contact Programs
 
-License
---------------------------------------
-License is [here](./LICENSE.txt).
+The Problem:
 
-Apart from forbidding the use of this software for criminal activity, this license is similar to the [MIT License](https://opensource.org/licenses/mit-license.php).
+A Migrant Worker who arrives at a new locality may not have all the necessary skills or training to understand what are their entitlements. The worker may not be aware of all the requirements to practice a particular trade in the locality. A contact program for such migrant worker can help bring upskill.
 
-GMO Blockchain Open Source Common License document is [here](https://guide.blockchain.z.com/docs/oss/license/).
+Carrying documents along with them to prove that they are skilled to all job sites may not be a practical solution. 
 
-DEMO
---------------------------------------
-You can check the operation of this sample project on this page.
+Solution 
 
-http://oss.blockchain.z.com/kyc/
+A Skill verification Network (SkillNet) on Blockchain can serve as a Skill Attestation Network to prove that the workers are experienced in specific Trade. The Skill Attestation Network will also enable the worker to self-nominate/attend any available upskilling programs at contact centers in their area.
 
-Explanation
---------------------------------------
-- #### GMO Blockchain Open Source
-    http://guide.blockchain.z.com/docs/oss/
+The migrant work can register themself or through a Trusted authority get registered on SkillNet.For every eligible contact program SkillNet will issue a unique DIFA (Digital ID For All) for the Migrant Worker using which the worker can attend and complete the upskilling program. SkillNet Application takes into account certain basic documents that can prove without divulging unnecesary personal information about the worker into the public domain.
 
-- #### KYC (Know Your Customer)
-    http://guide.blockchain.z.com/docs/oss/kyc/
+Actors:
 
-Usage Guides
---------------------------------------
+Migrant Workers
+Skill India Program Coordinators
+Contact Program Centers
+Potential Employers
+Roles :
 
-### Create Z.com Cloud Blockchain environment
-see [Setup Development Environment](https://guide.blockchain.z.com/docs/init/setup/)
+Issuer: SkillNet Registry.
 
-### Install application
-```bash
-git clone --recursive https://github.com/zcom-cloud-blockchain/oss-kyc.git
-cd oss-kyc/server
-npm install
-```
+Verifier: Contact Centers/Skill India program coordinators.
 
-### Deploy contracts
-```bash
-cd oss-kyc/provider
-truffle migrate
-```
+Holder/Prover: (Worker or Trusted Authority/Assessment Centers).
 
-### Set up for Z.com Cloud Blockchain
-See [Basic Configuration](https://guide.blockchain.z.com/docs/dapp/setup/)
+Benefits:
 
-- ##### Set CNS address on admin console
-  1. Open a file 'provider/build/contracts/ContractNameService.json'
+SkillNet can keep track of Migrant worker's skills acquired through contact programs and verified at contact centers.  The solution is  built on top of existing India Stack and services.
 
-  2. Use 'networks.(network-id).address' to register as CNS address on admin console
-
-See [Contract Creation Process](https://guide.blockchain.z.com/docs/dapp/contract/)
-- ##### Set Contract ABIs on admin console
-  1. Open following files
-    ```bash
-    'provider/build/contracts/ProxyController_v1.json'
-    ```
-  2. Use 'networks.(network-id).address' and 'abi' values to register as Contract ABIs on admin console
-
-### Configure for client
-Create server/public/js/config.js based on server/public/js/config_template.js. Edit "CNS" which you deployed.
-
-### Start application
-```bash
-cd oss-kyc
-node server/app.js
-```
+SkillNet can be enhanced further to include background verification check as required, without compromising on personal details at any point in time
